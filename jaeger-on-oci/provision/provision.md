@@ -47,7 +47,7 @@ This lab assumes you have:
     - **linux_images**: Oracle Linux image OCID for your selected region.
     - **instance\_params.jaeger\_vm.ad**: Availability domain number valid in the selected region.
     - **instance\_params.jaeger\_vm.shape**: Compute shape for the VM.
-    - **instance\_params.jaeger\_vm.ocpus** and **memory_in_gbs**: Shape sizing for flexible shapes.
+    - **instance\_params.jaeger\_vm.ocpus** and **memory\_in\_gbs**: Shape sizing for flexible shapes.
     - **instance\_params.jaeger\_vm.ssh\_private\_key**: Local path to the SSH private key used by the output SSH command.
     - **ssh\_public\_key**: Local path to the SSH public key injected into the VM.
     - **sl\_params.jaeger\_sl.ingress\_rules[*].source**: Replace `0.0.0.0/0` with trusted CIDR ranges where appropriate.
