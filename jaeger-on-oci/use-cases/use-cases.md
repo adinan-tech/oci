@@ -176,8 +176,8 @@ This lab assumes you have:
 
 1. Review the Terraform outputs for external trace ingestion endpoints:
 
-    - **otlp_grpc_endpoints**
-    - **otlp_http_endpoints**
+    - **otlp\_grpc\_endpoints**
+    - **otlp\_http\_endpoints**
 
 2. Use these endpoints if you want to send traces from another application or trace generator into this Jaeger deployment.
 
