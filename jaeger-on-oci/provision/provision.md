@@ -34,13 +34,13 @@ This lab assumes you have:
 
 3. Update `provider.auto.tfvars` with your OCI provider and compartment details:
 
-    - **tenancy_ocid**: Your tenancy OCID.
-    - **user_ocid**: Your user OCID for API key authentication.
+    - **tenancy\_ocid**: Your tenancy OCID.
+    - **user\_ocid**: Your user OCID for API key authentication.
     - **fingerprint**: Your API key fingerprint.
     - **private\_key\_path**: Local path to your OCI API private key.
     - **private\_key\_password**: Private key password, or an empty string if the key has no password.
     - **region**: Target OCI region.
-    - **compartment_ids.target**: Compartment OCID where the resources will be deployed.
+    - **compartment\_ids.target**: Compartment OCID where the resources will be deployed.
 
 4. Update `terraform.tfvars` with the deployment values:
 
@@ -48,7 +48,7 @@ This lab assumes you have:
     - **instance\_params.jaeger\_vm.ad**: Availability domain number valid in the selected region.
     - **instance\_params.jaeger\_vm.shape**: Compute shape for the VM.
     - **instance\_params.jaeger\_vm.ocpus** and **memory_in_gbs**: Shape sizing for flexible shapes.
-    - **instance\_params.jaeger\_vm.ssh_private_key**: Local path to the SSH private key used by the output SSH command.
+    - **instance\_params.jaeger\_vm.ssh\_private\_key**: Local path to the SSH private key used by the output SSH command.
     - **ssh\_public\_key**: Local path to the SSH public key injected into the VM.
     - **sl\_params.jaeger\_sl.ingress\_rules[*].source**: Replace `0.0.0.0/0` with trusted CIDR ranges where appropriate.
 
