@@ -138,13 +138,17 @@ This lab assumes you have:
 
     The output should show the `jaeger` and `jaeger-hotrod` containers running, followed by a health confirmation similar to this:
 
+    ```text
+    CONTAINER ID   IMAGE                                      STATUS       NAMES
+    <container>    jaegertracing/example-hotrod:latest        Up 2 hours   jaeger-hotrod
+    <container>    jaegertracing/jaeger:2.19.0                Up 2 hours   jaeger
+    
+    PORTS
+    jaeger-hotrod: 8080/tcp
+    jaeger: 4317-4318/tcp, 5778/tcp, 9411/tcp, 16686/tcp
     ```
-    CONTAINER ID   IMAGE                                                     COMMAND                  CREATED       STATUS       PORTS                                                                                                                                                                                                                                                         NAMES
-    <container>    cr.jaegertracing.io/jaegertracing/example-hotrod:latest   "/go/bin/hotrod-linu..." 2 hours ago   Up 2 hours   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 8081-8083/tcp                                                                                                                                       jaeger-hotrod
-    <container>    cr.jaegertracing.io/jaegertracing/jaeger:2.19.0           "/cmd/jaeger/jaeger-..." 2 hours ago   Up 2 hours   0.0.0.0:4317-4318->4317-4318/tcp, [::]:4317-4318->4317-4318/tcp, 0.0.0.0:5778->5778/tcp, 0.0.0.0:9411->9411/tcp, 0.0.0.0:16686->16686/tcp   jaeger
-
+    
     Jaeger UI is healthy
-    ```
 
 4. Generate sample traces from the VM:
 
