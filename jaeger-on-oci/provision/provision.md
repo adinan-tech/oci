@@ -37,20 +37,20 @@ This lab assumes you have:
     - **tenancy_ocid**: Your tenancy OCID.
     - **user_ocid**: Your user OCID for API key authentication.
     - **fingerprint**: Your API key fingerprint.
-    - **private_key_path**: Local path to your OCI API private key.
-    - **private_key_password**: Private key password, or an empty string if the key has no password.
+    - **private\_key\_path**: Local path to your OCI API private key.
+    - **private\_key\_password**: Private key password, or an empty string if the key has no password.
     - **region**: Target OCI region.
     - **compartment_ids.target**: Compartment OCID where the resources will be deployed.
 
 4. Update `terraform.tfvars` with the deployment values:
 
     - **linux_images**: Oracle Linux image OCID for your selected region.
-    - **instance_params.jaeger_vm.ad**: Availability domain number valid in the selected region.
-    - **instance_params.jaeger_vm.shape**: Compute shape for the VM.
-    - **instance_params.jaeger_vm.ocpus** and **memory_in_gbs**: Shape sizing for flexible shapes.
-    - **instance_params.jaeger_vm.ssh_private_key**: Local path to the SSH private key used by the output SSH command.
-    - **ssh_public_key**: Local path to the SSH public key injected into the VM.
-    - **sl_params.jaeger_sl.ingress_rules[*].source**: Replace `0.0.0.0/0` with trusted CIDR ranges where appropriate.
+    - **instance\_params.jaeger\_vm.ad**: Availability domain number valid in the selected region.
+    - **instance\_params.jaeger\_vm.shape**: Compute shape for the VM.
+    - **instance\_params.jaeger\_vm.ocpus** and **memory_in_gbs**: Shape sizing for flexible shapes.
+    - **instance\_params.jaeger\_vm.ssh_private_key**: Local path to the SSH private key used by the output SSH command.
+    - **ssh\_public\_key**: Local path to the SSH public key injected into the VM.
+    - **sl\_params.jaeger\_sl.ingress\_rules[*].source**: Replace `0.0.0.0/0` with trusted CIDR ranges where appropriate.
 
 5. Initialize Terraform:
 
@@ -80,12 +80,12 @@ This lab assumes you have:
 
 9. When Terraform completes, review the output values:
 
-    - **jaeger_ui_urls**: URL for the Jaeger UI.
-    - **hotrod_urls**: URL for the HotROD demo application.
-    - **otlp_grpc_endpoints**: OTLP gRPC endpoint.
-    - **otlp_http_endpoints**: OTLP HTTP endpoint.
-    - **ssh_commands**: SSH command for connecting to the VM.
-    - **next_steps**: Generated validation steps.
+    - **jaeger\_ui\_urls**: URL for the Jaeger UI.
+    - **hotrod\_urls**: URL for the HotROD demo application.
+    - **otlp\_grpc\_endpoints**: OTLP gRPC endpoint.
+    - **otlp\_http\_endpoints**: OTLP HTTP endpoint.
+    - **ssh\_commands**: SSH command for connecting to the VM.
+    - **next\_steps**: Generated validation steps.
 
 10. Wait a few minutes for cloud-init to finish installing Docker and starting the Jaeger and HotROD containers. If the URLs do not respond immediately, wait 2-5 minutes and retry.
 
